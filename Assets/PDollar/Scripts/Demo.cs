@@ -26,6 +26,7 @@ public class Demo : MonoBehaviour {
 
 	//GUI
 	private string message;
+	private GUIStyle style=new GUIStyle();
 	private bool recognized;
 	private string newGestureName = "";
 
@@ -98,9 +99,7 @@ public class Demo : MonoBehaviour {
 
 	void OnGUI() {
 
-		GUI.Box(drawArea, "Draw Area");
-
-		GUI.Label(new Rect(10, Screen.height - 40, 500, 50), message);
+		GUI.Label(new Rect(10, Screen.height - 40, 500, 50), "<color=#008080ff>"+message+"</color>");
 
 		if (Input.GetMouseButtonUp(0)) {
 
